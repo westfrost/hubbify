@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="da">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>HUBBIFY</title>
+<meta name="description" content="HUBBIFY – Æn utidi' melodimaskin'. Drukspil til forfesten med dong, Hubbis DJ-kald og neonlys. Til Android og Windows.">
+<meta property="og:title" content="HUBBIFY">
+<meta property="og:description" content="Æn utidi' melodimaskin'. Hent til Android og Windows.">
+<meta property="og:image" content="feature.png">
+<meta name="theme-color" content="#0f0f14">
+<link rel="icon" href="favicon.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<style>
+  :root {
+    --page: #0f0f14; --card: #1b1b24; --hero: #22222e; --raised: #2e2e3e; --line: #343446;
+    --text: #fff; --dim: #9a9aaa; --accent: #ffc800; --on-accent: #1a1400;
+    --pink: #ff3db4; --on-pink: #280018;
+  }
+  * { box-sizing: border-box; }
+  html { background: var(--page); }
+  body {
+    margin: 0; background: var(--page); color: var(--text);
+    font: 16px/1.55 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  }
+  main { max-width: 760px; margin: 0 auto; padding: 32px 16px 48px; }
+  a { color: var(--accent); }
+
+  .hero { text-align: center; }
+  .logo { position: relative; width: min(300px, 72vw); aspect-ratio: 1; margin: 0 auto; }
+  .logo img { position: absolute; inset: 0; width: 100%; height: 100%; }
+  .logo .glow { opacity: .55; transform: scale(1.02); animation: neon 6s infinite; }
+  @keyframes neon { 0%, 100% { opacity: .55; } 50% { opacity: .75; } }
+  @media (prefers-reduced-motion: reduce) { .logo .glow { animation: none; } }
+  h1 { font-size: 44px; letter-spacing: 3px; margin: 8px 0 0; line-height: 1.1; }
+  .tagline { color: var(--pink); font-size: 20px; margin: 4px 0 0; font-style: italic; }
+  .lead { color: var(--dim); max-width: 520px; margin: 16px auto 0; }
+
+  .downloads { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 28px 0 8px; }
+  @media (max-width: 560px) { .downloads { grid-template-columns: 1fr; } }
+  .btn {
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    min-height: 84px; padding: 14px 16px; border-radius: 18px; text-decoration: none;
+    font-weight: 800; font-size: 20px; letter-spacing: .5px;
+  }
+  .btn small { font-weight: 500; font-size: 13px; opacity: .8; letter-spacing: 0; }
+  .btn.android { background: var(--accent); color: var(--on-accent); }
+  .btn.windows { background: var(--card); color: var(--text); border: 2px solid var(--pink); }
+  .btn:hover { filter: brightness(1.08); }
+  .version { text-align: center; color: var(--dim); font-size: 14px; min-height: 1.5em; }
+
+  .card { background: var(--card); border-radius: 18px; padding: 20px; margin-top: 16px; }
+  .card h2 { margin: 0 0 8px; font-size: 20px; }
+  .card ol, .card ul { margin: 8px 0 0; padding-left: 22px; }
+  .card li { margin: 4px 0; }
+  .card p { margin: 8px 0 0; }
+  .dim { color: var(--dim); }
+  .note { border-left: 3px solid var(--accent); padding-left: 12px; }
+  code { background: var(--raised); border-radius: 6px; padding: 1px 6px; font-size: 14px; word-break: break-all; }
+  footer { color: var(--dim); font-size: 14px; text-align: center; margin-top: 32px; }
+  footer a { color: var(--dim); }
+</style>
+</head>
+<body>
+<main>
+  <section class="hero">
+    <div class="logo" aria-hidden="true">
+      <img class="glow" src="glow.webp" alt="">
+      <img src="logo.webp" alt="">
+    </div>
+    <h1>HUBBIFY</h1>
+    <p class="tagline">Æn utidi' melodimaskin'</p>
+    <p class="lead">Drukspil til forfesten. Der lyder en DONG på et tilfældigt tidspunkt, og så drikker alle.
+      Harske Hubbi kommer med DJ-kald ind imellem, og neonlogoet gløder i takt med bassen.</p>
+  </section>
+
+  <div class="downloads">
+    <a class="btn android" href="https://github.com/westfrost/hubbify/releases/latest/download/HUBBIFY.apk">
+      Hent til Android <small>HUBBIFY.apk · Android 8 eller nyere</small>
+    </a>
+    <a class="btn windows" href="https://github.com/westfrost/hubbify/releases/latest/download/HUBBIFY.exe">
+      Hent til Windows <small>HUBBIFY.exe · Windows 10 og 11</small>
+    </a>
+  </div>
+  <p class="version" id="version"></p>
+
+  <section class="card">
+    <h2>Android</h2>
+    <ol>
+      <li>Tryk <b>Hent til Android</b> på telefonen.</li>
+      <li>Åbn filen, når den er hentet. Første gang spørger telefonen, om browseren må installere ukendte apps: tryk
+        <b>Indstillinger</b>, slå <b>Tillad fra denne kilde</b> til, og gå tilbage.</li>
+      <li>Tryk <b>Installer</b>. Advarer Google Play Protect om en ukendt app, så vælg
+        <b>Flere detaljer → Installer alligevel</b>.</li>
+    </ol>
+    <p class="note">Har du en testudgave fra før, skal den afinstalleres først. Den er signeret med en anden nøgle,
+      så den nye kan ikke installeres oven i.</p>
+    <p class="dim">Automatiske opdateringer: installer <a href="https://github.com/ImranR98/Obtainium">Obtainium</a>
+      og tilføj <code>https://github.com/westfrost/hubbify</code>. Så får du besked, når der kommer en ny version.</p>
+  </section>
+
+  <section class="card">
+    <h2>Windows</h2>
+    <ol>
+      <li>Tryk <b>Hent til Windows</b>. Spørger browseren, om du vil beholde filen, så vælg <b>Behold</b>.</li>
+      <li>Dobbeltklik på <b>HUBBIFY.exe</b>. Læg den gerne på skrivebordet først.</li>
+      <li>Viser Windows <i>"Windows beskyttede din pc"</i>, så tryk <b>Flere oplysninger → Kør alligevel</b>.
+        Det sker, fordi programmet ikke har et (dyrt) kodesigneringscertifikat.</li>
+    </ol>
+    <p class="dim">Der skal ikke installeres noget: hele programmet er den ene fil. En ny version: hent den,
+      og erstat den gamle. Dine indstillinger bliver liggende.</p>
+  </section>
+
+  <section class="card">
+    <h2>Kun for voksne</h2>
+    <p>HUBBIFY er et drukspil for folk over 18 år. Drik med omtanke, og lad være med at køre bil bagefter.</p>
+  </section>
+
+  <footer>
+    <p><a href="privacy-policy.html">Privacy policy</a> ·
+      <a href="https://github.com/westfrost/hubbify/releases">Alle versioner</a></p>
+  </footer>
+</main>
+<script>
+  // Viser nyeste version og dato. Fejler det (fx uden net til GitHubs API), står knapperne der stadig.
+  fetch("https://api.github.com/repos/westfrost/hubbify/releases/latest")
+    .then(function (r) { return r.ok ? r.json() : null; })
+    .then(function (rel) {
+      if (!rel || !rel.tag_name) return;
+      var d = new Date(rel.published_at);
+      document.getElementById("version").textContent = "Nyeste version: " + rel.tag_name.replace(/^v/, "") +
+        " · " + d.toLocaleDateString("da-DK", { day: "numeric", month: "long", year: "numeric" });
+    })
+    .catch(function () {});
+</script>
+</body>
+</html>

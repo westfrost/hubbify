@@ -1,0 +1,4 @@
+# GitHub Pages (Jekyll). Siden lægges ud af .github/workflows/release.yml i det private repo.
+title: HUBBIFY
+exclude:
+  - README.md
