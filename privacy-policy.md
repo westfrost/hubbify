@@ -5,7 +5,7 @@ title: HUBBIFY – Privacy Policy
 
 # Privacy Policy for HUBBIFY
 
-*Last updated: September 25, 2026 (Windows version added)*
+*Last updated: September 25, 2026 (update check in the Windows version)*
 
 HUBBIFY is an app for Android and Windows that plays a "dong" sound at random intervals.
 
@@ -14,7 +14,8 @@ HUBBIFY is an app for Android and Windows that plays a "dong" sound at random in
 **None.** HUBBIFY does not collect, store or share any personal data.
 
 - The app has no account, no ads and no analytics or tracking tools.
-- The app does not use the internet.
+- The Android app does not use the internet. The Windows version only contacts github.com to check
+  for and download new versions (see below).
 - Your settings (e.g. number of people and minutes) are stored only on your device: on Android in
   the app's own storage (deleted when you uninstall the app), on Windows in the file
   `%APPDATA%\DongRadio\indstillinger.txt`.
@@ -37,6 +38,10 @@ None of these permissions are used to collect data.
   anywhere, and the microphone is not used.
 - To lower the volume of Spotify while a sound plays, the app changes Spotify's volume in the
   Windows volume mixer and restores it afterwards.
+- **Updates:** when it starts, the Windows version asks github.com which version is the newest.
+  If a newer one exists, it shows a button; only if you click it, the new version is downloaded from
+  github.com. No personal data is sent, only an ordinary web request (which, like any web request,
+  reveals your IP address to GitHub).
 
 ## Children
 
